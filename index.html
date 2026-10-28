@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Currículo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form id="formulario">
+
+        <div class="cabecalho">
+            <span class="etiqueta">💼 VAGAS DE EMPREGO</span>
+            <h1>Cadastre seu <span>currículo</span></h1>
+            <p>Preencha seus dados e encontre sua próxima oportunidade!</p>
+        </div>
+
+        <h2>👤 Informações pessoais</h2>
+
+        <input
+            type="text"
+            name="nome"
+            placeholder="Nome completo"
+            required
+        >
+
+        <div class="linha">
+            <input
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                required
+            >
+
+            <input
+                type="tel"
+                name="telefone"
+                placeholder="Telefone"
+            >
+        </div>
+
+        <div class="linha">
+            <input
+                type="text"
+                name="cpf"
+                placeholder="CPF"
+                required
+            >
+
+            <input
+                type="text"
+                name="endereco"
+                placeholder="Endereço completo"
+                required
+            >
+        </div>
+
+        <h2>💼 Vaga e escolaridade</h2>
+
+        <div class="linha">
+            <select name="vaga" required>
+                <option value="">Vaga desejada</option>
+                <option value="Atendente">Atendente</option>
+                <option value="Vendedor(a)">Vendedor(a)</option>
+                <option value="Recepcionista">Recepcionista</option>
+                <option value="Auxiliar administrativo">Auxiliar administrativo</option>
+                <option value="Jovem aprendiz">Jovem aprendiz</option>
+                <option value="Auxiliar de serviços gerais">Auxiliar de serviços gerais</option>
+            </select>
+
+            <select name="escolaridade" required>
+                <option value="">Escolaridade</option>
+                <option value="Ensino fundamental">Ensino fundamental</option>
+                <option value="Ensino médio cursando">Ensino médio cursando</option>
+                <option value="Ensino médio completo">Ensino médio completo</option>
+                <option value="Ensino superior cursando">Ensino superior cursando</option>
+                <option value="Ensino superior completo">Ensino superior completo</option>
+            </select>
+        </div>
+
+        <h2>⭐ Experiência profissional</h2>
+
+        <textarea
+            name="experiencia"
+            placeholder="Conte sobre suas experiências profissionais e habilidades"
+        ></textarea>
+
+        <h2>🔗 Link do currículo</h2>
+
+        <input
+            type="url"
+            name="curriculo"
+            placeholder="Cole o link do seu currículo"
+            required
+        >
+
+        <p class="dica">
+            💡 Você pode inserir um link do Google Drive ou LinkedIn.
+        </p>
+
+        <h2>✉️ Mensagem para a empresa</h2>
+
+        <textarea
+            name="mensagem"
+            placeholder="Por que você deseja trabalhar conosco?"
+        ></textarea>
+
+        <button type="submit" id="botao">
+            ➤ Enviar candidatura
+        </button>
+
+        <p class="seguro">
+            🔒 Seus dados serão enviados para análise da candidatura.
+        </p>
+
+        <p id="aviso"></p>
+
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

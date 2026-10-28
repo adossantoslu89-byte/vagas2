@@ -1,0 +1,237 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top left, #5940c9, transparent 35%),
+        radial-gradient(circle at bottom right, #4830b9, transparent 35%),
+        #0b1437;
+}
+
+#formulario {
+    width: 100%;
+    max-width: 700px;
+    padding: 38px;
+    background: #ffffff;
+    border-radius: 20px;
+    border-top: 6px solid #7954f5;
+    box-shadow: 0 25px 70px #00000040;
+    animation: aparecer 0.6s ease;
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 9px 15px;
+    margin-bottom: 18px;
+    border-radius: 25px;
+    background: #eee9ff;
+    color: #6748d9;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.cabecalho h1 {
+    color: #17204a;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+
+.cabecalho h1 span {
+    color: #7954f5;
+}
+
+.cabecalho p {
+    color: #7b84a2;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+#formulario h2 {
+    margin: 28px 0 17px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #e8e9f4;
+    color: #252c58;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.linha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+#formulario input,
+#formulario select,
+#formulario textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 15px;
+    padding: 14px;
+    border: 1px solid #dce1f1;
+    border-radius: 10px;
+    outline: none;
+    background: #fafbff;
+    color: #20284f;
+    font-family: inherit;
+    font-size: 13px;
+    transition: 0.25s;
+}
+
+#formulario input,
+#formulario select {
+    min-height: 47px;
+}
+
+#formulario input::placeholder,
+#formulario textarea::placeholder {
+    color: #929bb6;
+}
+
+#formulario input:focus,
+#formulario select:focus,
+#formulario textarea:focus {
+    border-color: #7954f5;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px #7954f51a;
+}
+
+#formulario textarea {
+    min-height: 100px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.dica {
+    margin-top: -7px;
+    margin-bottom: 18px;
+    color: #747d9c;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+#formulario input[type="url"] {
+    background: #f8f6ff;
+    border-color: #cfc3ff;
+}
+
+#botao {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 12px;
+    padding: 15px;
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient(110deg, #8050ef, #285cf6);
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 8px 20px #6848e535;
+    transition: 0.25s;
+}
+
+#botao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px #6848e550;
+}
+
+#botao:active {
+    transform: scale(0.99);
+}
+
+#botao:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.seguro {
+    margin-top: 15px;
+    text-align: center;
+    color: #858eaa;
+    font-size: 11px;
+}
+
+#aviso {
+    display: none;
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+#aviso.sucesso {
+    display: block;
+    color: #176d43;
+    background: #e9fbf1;
+    border: 1px solid #b8efd0;
+}
+
+#aviso.erro {
+    display: block;
+    color: #b42323;
+    background: #fff0f0;
+    border: 1px solid #ffcaca;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+        align-items: flex-start;
+    }
+
+    #formulario {
+        padding: 25px 18px;
+        border-radius: 16px;
+    }
+
+    .cabecalho h1 {
+        font-size: 28px;
+    }
+
+    .linha {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    #formulario h2 {
+        font-size: 15px;
+    }
+}
